@@ -2,440 +2,540 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>سیم‌کش | برق و سیم‌کشی خودرو</title>
-  <meta name="description" content="خدمات سیم‌کشی، برق و عیب‌یابی خودرو در نیشابور">
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سیم‌کش خودرو | نیشابور</title>
+<meta name="description" content="خدمات سیم‌کشی، برق خودرو، تعمیر قفل و شیشه‌بالابر در نیشابور">
 
-    :root {
-      --black: #080808;
-      --dark: #121212;
-      --card: #181818;
-      --gold: #f5bd42;
-      --white: #f5f5f5;
-      --gray: #b8b8b8;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+:root {
+  --black: #080808;
+  --dark: #111111;
+  --card: #191919;
+  --gold: #f5bd42;
+  --white: #f5f5f5;
+  --gray: #bdbdbd;
+}
 
-    body {
-      font-family: Tahoma, Arial, sans-serif;
-      background: var(--black);
-      color: var(--white);
-      line-height: 1.9;
-    }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
 
-    header {
-      padding: 18px 6%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #292929;
-      background: #0b0b0b;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+body {
+  font-family: Tahoma, Arial, sans-serif;
+  background: var(--black);
+  color: var(--white);
+  line-height: 1.9;
+}
 
-    .logo {
-      color: var(--gold);
-      font-size: 27px;
-      font-weight: bold;
-    }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  min-height: 75px;
+  padding: 12px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  background: #0b0b0b;
+  border-bottom: 1px solid #333;
+}
 
-    .logo span {
-      color: white;
-    }
+.logo {
+  color: var(--gold);
+  font-size: 23px;
+  font-weight: bold;
+  white-space: nowrap;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-right: 18px;
-      font-size: 14px;
-    }
+.logo span {
+  color: white;
+}
 
-    nav a:hover {
-      color: var(--gold);
-    }
+.menu-button {
+  background: var(--gold);
+  color: #080808;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 17px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
 
-    .hero {
-      min-height: 440px;
-      padding: 85px 7%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      background:
-        radial-gradient(ellipse at 80% 20%, #45300c 0%, transparent 45%),
-        linear-gradient(135deg, #171717, #080808 75%);
-      border-bottom: 1px solid #292929;
-    }
+nav {
+  display: none;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 12px;
+  right: 12px;
+  padding: 12px;
+  background: #151515;
+  border: 1px solid #66501f;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px #0009;
+}
 
-    .tag {
-      color: var(--gold);
-      border: 1px solid #70551e;
-      background: #201808;
-      padding: 5px 14px;
-      border-radius: 30px;
-      font-size: 13px;
-      margin-bottom: 18px;
-    }
+nav.open {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
 
-    h1 {
-      font-size: clamp(30px, 5vw, 49px);
-      line-height: 1.5;
-      margin-bottom: 14px;
-    }
+nav a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 7px;
+}
 
-    h1 span, h2 span {
-      color: var(--gold);
-    }
+nav a:hover {
+  background: #292216;
+  color: var(--gold);
+}
 
-    .hero p {
-      max-width: 600px;
-      color: var(--gray);
-      margin-bottom: 25px;
-    }
+.hero {
+  min-height: 440px;
+  padding: 80px 7%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse at 80% 20%, #48320d 0%, transparent 45%),
+    linear-gradient(135deg, #191919, #080808 75%);
+  border-bottom: 1px solid #292929;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 11px 22px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: .2s;
-      border: 1px solid var(--gold);
-    }
+.tag {
+  display: inline-block;
+  color: var(--gold);
+  background: #211a0c;
+  border: 1px solid #70551e;
+  padding: 5px 14px;
+  border-radius: 30px;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
 
-    .btn-gold {
-      background: var(--gold);
-      color: #111;
-    }
+h1 {
+  font-size: clamp(30px, 5vw, 48px);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
 
-    .btn-dark {
-      color: var(--gold);
-      margin-right: 8px;
-    }
+h1 span, h2 span {
+  color: var(--gold);
+}
 
-    .btn:hover {
-      transform: translateY(-2px);
-      filter: brightness(1.1);
-    }
+.hero p {
+  color: var(--gray);
+  max-width: 600px;
+  margin-bottom: 25px;
+}
 
-    section {
-      padding: 65px 7%;
-    }
+.btn {
+  display: inline-block;
+  padding: 11px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: .2s;
+  border: 1px solid var(--gold);
+  cursor: pointer;
+}
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 35px;
-    }
+.btn-gold {
+  background: var(--gold);
+  color: #111;
+}
 
-    .section-title h2 {
-      font-size: 29px;
-      margin-bottom: 8px;
-    }
+.btn-dark {
+  color: var(--gold);
+  margin-right: 8px;
+}
 
-    .section-title p {
-      color: var(--gray);
-      font-size: 14px;
-    }
+.btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}
 
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-    }
+section {
+  padding: 65px 7%;
+}
 
-    .service-card {
-      background: var(--card);
-      border: 1px solid #303030;
-      border-radius: 13px;
-      padding: 25px;
-      transition: .25s;
-      cursor: pointer;
-    }
+.section-title {
+  text-align: center;
+  margin-bottom: 35px;
+}
 
-    .service-card:hover,
-    .service-card.active {
-      border-color: var(--gold);
-      transform: translateY(-4px);
-    }
+.section-title h2 {
+  font-size: 29px;
+  margin-bottom: 8px;
+}
 
-    .service-icon {
-      font-size: 34px;
-      margin-bottom: 10px;
-    }
+.section-title p {
+  color: var(--gray);
+  font-size: 14px;
+}
 
-    .service-card h3 {
-      color: var(--gold);
-      margin-bottom: 10px;
-      font-size: 19px;
-    }
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
 
-    .service-card p {
-      color: var(--gray);
-      font-size: 14px;
-    }
+.service-card {
+  background: var(--card);
+  border: 1px solid #303030;
+  border-radius: 13px;
+  padding: 24px;
+  transition: .25s;
+  cursor: pointer;
+  outline: none;
+}
 
-    .more {
-      display: none;
-      border-top: 1px solid #39301e;
-      padding-top: 12px;
-      margin-top: 14px;
-    }
+.service-card:hover,
+.service-card.active,
+.service-card:focus-visible {
+  border-color: var(--gold);
+  transform: translateY(-3px);
+}
 
-    .service-card.active .more {
-      display: block;
-    }
+.service-icon {
+  font-size: 34px;
+  margin-bottom: 8px;
+}
 
-    .more strong {
-      color: var(--gold);
-    }
+.service-card h3 {
+  color: var(--gold);
+  font-size: 19px;
+  margin-bottom: 8px;
+}
 
-    .hint {
-      text-align: center;
-      color: #888;
-      font-size: 12px;
-      margin-top: 18px;
-    }
+.service-card > p {
+  color: var(--gray);
+  font-size: 14px;
+}
 
-    .about {
-      background: var(--dark);
-      border-top: 1px solid #292929;
-      border-bottom: 1px solid #292929;
-    }
+.more {
+  display: none;
+  border-top: 1px solid #39301e;
+  padding-top: 13px;
+  margin-top: 14px;
+  color: var(--gray);
+  font-size: 14px;
+  cursor: default;
+}
 
-    .about-box {
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-    }
+.service-card.active .more {
+  display: block;
+}
 
-    .about-box p {
-      color: var(--gray);
-      margin-top: 14px;
-    }
+.more strong {
+  color: var(--gold);
+}
 
-    .contact-box {
-      max-width: 700px;
-      margin: auto;
-      padding: 30px;
-      background: var(--card);
-      border: 1px solid #353535;
-      border-radius: 14px;
-    }
+.lock-services {
+  padding-right: 22px;
+  margin: 10px 0;
+}
 
-    .contact-item {
-      padding: 13px 0;
-      border-bottom: 1px solid #303030;
-    }
+.lock-services li {
+  margin-bottom: 7px;
+}
 
-    .contact-item:last-of-type {
-      border-bottom: none;
-      margin-bottom: 20px;
-    }
+.lock-services li::marker {
+  color: var(--gold);
+}
 
-    .contact-item strong {
-      color: var(--gold);
-    }
+.hint {
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+  margin-top: 18px;
+}
 
-    .contact-item a {
-      color: white;
-      text-decoration: none;
-    }
+.about {
+  background: var(--dark);
+  border-top: 1px solid #292929;
+  border-bottom: 1px solid #292929;
+}
 
-    .contact-item a:hover {
-      color: var(--gold);
-    }
+.about-box {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
 
-    footer {
-      text-align: center;
-      padding: 22px;
-      color: #888;
-      background: #050505;
-      border-top: 1px solid #292929;
-      font-size: 13px;
-    }
+.about-box p {
+  color: var(--gray);
+  margin-top: 14px;
+}
 
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        gap: 8px;
-      }
+.contact-box {
+  max-width: 700px;
+  margin: auto;
+  padding: 28px;
+  background: var(--card);
+  border: 1px solid #353535;
+  border-radius: 14px;
+}
 
-      nav a {
-        margin: 0 7px;
-        font-size: 12px;
-      }
+.contact-item {
+  padding: 13px 0;
+  border-bottom: 1px solid #303030;
+  overflow-wrap: anywhere;
+}
 
-      .hero {
-        min-height: 390px;
-        padding: 60px 6%;
-      }
+.contact-item:last-of-type {
+  border-bottom: none;
+  margin-bottom: 20px;
+}
 
-      section {
-        padding: 48px 5%;
-      }
+.contact-item strong {
+  color: var(--gold);
+}
 
-      .contact-box {
-        padding: 20px;
-      }
-    }
-  </style>
+.contact-item a {
+  color: white;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  color: var(--gold);
+}
+
+footer {
+  text-align: center;
+  padding: 22px;
+  color: #888;
+  background: #050505;
+  border-top: 1px solid #292929;
+  font-size: 13px;
+}
+
+@media (min-width: 800px) {
+  header nav {
+    display: none;
+    left: 6%;
+    right: auto;
+    width: 240px;
+  }
+
+  header nav.open {
+    display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 12px 5%;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .hero {
+    min-height: 390px;
+    padding: 55px 6%;
+  }
+
+  section {
+    padding: 48px 5%;
+  }
+
+  .contact-box {
+    padding: 20px;
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <div class="logo">سیم‌<span>کش</span></div>
-    <nav>
-      <a href="#home">خانه</a>
-      <a href="#services">خدمات</a>
-      <a href="#about">درباره ما</a>
-      <a href="#contact">تماس</a>
-    </nav>
-  </header>
+<header>
+  <div class="logo">سیم‌کش <span>خودرو</span></div>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="tag">خدمات برق و سیم‌کشی خودرو</div>
-      <h1>تخصص در <span>برق خودرو</span><br>اعتماد در هر اتصال</h1>
-      <p>
-        انجام خدمات سیم‌کشی، بررسی مشکلات برقی و عیب‌یابی خودرو
-        در نیشابور، با دقت و توجه به جزئیات.
-      </p>
-      <div>
-        <a class="btn btn-gold" href="tel:09940266019">تماس با ما</a>
-        <a class="btn btn-dark" href="#services">مشاهده خدمات</a>
-      </div>
-    </section>
+  <button class="menu-button" id="menuButton"
+    aria-expanded="false" aria-controls="siteMenu">
+    ☰ منو
+  </button>
 
-    <section id="services">
-      <div class="section-title">
-        <h2>خدمات <span>ما</span></h2>
-        <p>روی هر کارت بزن تا توضیحات کامل‌تر نمایش داده شود.</p>
-      </div>
+  <nav id="siteMenu">
+    <a href="#home">🏠 خانه</a>
+    <a href="#services">🔧 خدمات ما</a>
+    <a href="#about">👨‍🔧 درباره ما</a>
+    <a href="#contact">📞 تماس با ما</a>
+  </nav>
+</header>
 
-      <div class="services">
+<main>
 
-        <article class="service-card" tabindex="0" role="button"
-          aria-expanded="false">
-          <div class="service-icon">🔌</div>
-          <h3>سیم‌کشی خودرو</h3>
-          <p>بررسی سیم‌ها، اتصالات و مشکلات سیم‌کشی خودرو.</p>
-          <div class="more">
-            <strong>توضیحات بیشتر</strong>
-            <p>
-              بررسی اتصالات برقی، پیدا کردن قطعی سیم‌ها،
-              رسیدگی به اتصالات معیوب و بررسی علت مشکلات برقی خودرو.
-            </p>
-          </div>
-        </article>
+<section class="hero" id="home">
+  <div class="tag">خدمات تخصصی برق و سیم‌کشی خودرو</div>
+  <h1>سیم‌کش <span>خودرو</span><br>دقت در کار، اعتماد در خدمات</h1>
+  <p>
+    ارائه خدمات سیم‌کشی، عیب‌یابی برق خودرو، تعمیر شیشه‌بالابر،
+    تعمیر قفل و دیگر خدمات مرتبط با خودرو در نیشابور.
+  </p>
+  <div>
+    <a class="btn btn-gold" href="tel:09940266019">📞 تماس با ما</a>
+    <a class="btn btn-dark" href="#services">مشاهده خدمات</a>
+  </div>
+</section>
 
-        <article class="service-card" tabindex="0" role="button"
-          aria-expanded="false">
-          <div class="service-icon">🔐</div>
-          <h3>قفل‌سازی خودرو</h3>
-          <p>بررسی و رفع مشکلات قفل درهای خودرو.</p>
-          <div class="more">
-            <strong>توضیحات بیشتر</strong>
-            <p>
-              بررسی گیرکردن قفل، مشکلات مکانیزم قفل در و
-              عیب‌یابی مشکلات مربوط به باز و بسته شدن قفل خودرو.
-              <br>
-              <strong>توجه:</strong> ساخت کلید خودرو انجام نمی‌شود.
-            </p>
-          </div>
-        </article>
+<section id="services">
+  <div class="section-title">
+    <h2>خدمات <span>ما</span></h2>
+    <p>روی هر بخش بزن تا توضیحات کامل‌تر نمایش داده شود.</p>
+  </div>
 
-        <article class="service-card" tabindex="0" role="button"
-          aria-expanded="false">
-          <div class="service-icon">⚡</div>
-          <h3>عیب‌یابی برق خودرو</h3>
-          <p>بررسی علت ایرادهای برقی و پیدا کردن منشأ مشکل.</p>
-          <div class="more">
-            <strong>توضیحات بیشتر</strong>
-            <p>
-              بررسی مشکلات باتری، دینام، استارت، فیوزها،
-              چراغ‌ها و سایر ایرادهای برقی خودرو برای
-              شناسایی علت خرابی.
-            </p>
-          </div>
-        </article>
+  <div class="services">
 
-      </div>
-      <p class="hint">برای بستن توضیحات، دوباره روی همان کارت بزن.</p>
-    </section>
-
-    <section class="about" id="about">
-      <div class="about-box">
-        <div class="section-title">
-          <h2>درباره <span>سیم‌کش</span></h2>
-        </div>
+    <article class="service-card" tabindex="0" role="button"
+      aria-expanded="false">
+      <div class="service-icon">🔌</div>
+      <h3>سیم‌کشی خودرو</h3>
+      <p>بررسی سیم‌ها، اتصالات و مشکلات سیم‌کشی خودرو.</p>
+      <div class="more">
+        <strong>توضیحات خدمات</strong>
         <p>
-          سیم‌کش ارائه‌دهنده خدمات سیم‌کشی، برق و عیب‌یابی خودرو
-          و رسیدگی به مشکلات قفل خودرو در نیشابور است.
-          هدف ما بررسی دقیق مشکل و ارائه خدمات متناسب با نیاز خودروست.
+          بررسی اتصالات برقی، پیدا کردن قطعی سیم‌ها،
+          رسیدگی به اتصالات معیوب و بررسی علت مشکلات سیم‌کشی خودرو.
         </p>
       </div>
-    </section>
+    </article>
 
-    <section id="contact">
-      <div class="section-title">
-        <h2>ارتباط با <span>ما</span></h2>
-        <p>برای هماهنگی و دریافت اطلاعات بیشتر تماس بگیرید.</p>
+    <article class="service-card" tabindex="0" role="button"
+      aria-expanded="false">
+      <div class="service-icon">🔐</div>
+      <h3>قفل‌سازی و تجهیزات خودرو</h3>
+      <p>تعمیر قفل و در خودرو و خدمات تجهیزات برقی و جانبی.</p>
+      <div class="more">
+        <strong>خدمات این بخش</strong>
+        <ul class="lock-services">
+          <li>تعمیر شیشه‌بالابر برقی</li>
+          <li>رگلاژ و صدای‌گیری در خودرو</li>
+          <li>تعمیر و تعویض آینه بغل</li>
+          <li>تعمیر کمربند ایمنی</li>
+          <li>نصب و تعمیر انواع دزدگیر</li>
+          <li>بررسی و تعمیر مشکلات قفل در خودرو</li>
+        </ul>
+        <p><strong>توجه:</strong> ساخت کلید خودرو انجام نمی‌شود.</p>
       </div>
+    </article>
 
-      <div class="contact-box">
-        <div class="contact-item">
-          <strong>📞 شماره تماس:</strong>
-          <a href="tel:09940266019"> 09940266019</a>
-        </div>
-
-        <div class="contact-item">
-          <strong>📍 آدرس:</strong>
-          نیشابور، سی‌متری طالقانی، طالقانی ۲۸، کوچه میکرون
-        </div>
-
-        <a class="btn btn-gold" href="tel:09940266019">
-          تماس با سیم‌کش
-        </a>
+    <article class="service-card" tabindex="0" role="button"
+      aria-expanded="false">
+      <div class="service-icon">⚡</div>
+      <h3>عیب‌یابی برق خودرو</h3>
+      <p>پیدا کردن علت ایرادهای برقی خودرو.</p>
+      <div class="more">
+        <strong>توضیحات خدمات</strong>
+        <p>
+          بررسی مشکلات باتری، دینام، استارت، فیوزها و چراغ‌ها
+          و بررسی علت خرابی‌های سیستم برق خودرو.
+        </p>
       </div>
-    </section>
-  </main>
+    </article>
 
-  <footer>
-    <p>© سیم‌کش | خدمات برق و سیم‌کشی خودرو در نیشابور</p>
-  </footer>
+  </div>
+  <p class="hint">برای بستن توضیحات، دوباره روی همان کارت بزن.</p>
+</section>
 
-  <script>
-    const cards = document.querySelectorAll(".service-card");
+<section class="about" id="about">
+  <div class="about-box">
+    <div class="section-title">
+      <h2>درباره <span>سیم‌کش خودرو</span></h2>
+    </div>
+    <p>
+      سیم‌کش خودرو ارائه‌دهنده خدمات سیم‌کشی، برق و عیب‌یابی خودرو،
+      تعمیر قفل و تجهیزات جانبی خودرو در نیشابور است.
+      هدف ما بررسی دقیق مشکلات و ارائه خدمات متناسب با نیاز خودروست.
+    </p>
+  </div>
+</section>
 
-    function toggleCard(card) {
-      const isActive = card.classList.toggle("active");
-      card.setAttribute("aria-expanded", isActive);
+<section id="contact">
+  <div class="section-title">
+    <h2>تماس با <span>ما</span></h2>
+    <p>برای هماهنگی و دریافت اطلاعات بیشتر تماس بگیرید.</p>
+  </div>
+
+  <div class="contact-box">
+    <div class="contact-item">
+      <strong>📞 شماره تماس:</strong>
+      <a href="tel:09940266019">09940266019</a>
+    </div>
+
+    <div class="contact-item">
+      <strong>📍 آدرس:</strong>
+      نیشابور، سی‌متری طالقانی، طالقانی ۲۸، کوچه میکرون
+    </div>
+
+    <a class="btn btn-gold" href="tel:09940266019">
+      تماس با سیم‌کش خودرو
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>© سیم‌کش خودرو | خدمات برق و سیم‌کشی خودرو در نیشابور</p>
+</footer>
+
+<script>
+const menuButton = document.getElementById("menuButton");
+const siteMenu = document.getElementById("siteMenu");
+
+menuButton.addEventListener("click", () => {
+  const isOpen = siteMenu.classList.toggle("open");
+  menuButton.setAttribute("aria-expanded", isOpen);
+});
+
+siteMenu.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    siteMenu.classList.remove("open");
+    menuButton.setAttribute("aria-expanded", "false");
+  });
+});
+
+document.querySelectorAll(".service-card").forEach(card => {
+  card.addEventListener("click", event => {
+    if (event.target.closest(".more")) return;
+
+    const isOpen = card.classList.toggle("active");
+    card.setAttribute("aria-expanded", isOpen);
+  });
+
+  card.addEventListener("keydown", event => {
+    if (event.target !== card) return;
+
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      const isOpen = card.classList.toggle("active");
+      card.setAttribute("aria-expanded", isOpen);
     }
-
-    cards.forEach(card => {
-      card.addEventListener("click", () => toggleCard(card));
-
-      card.addEventListener("keydown", event => {
-        if (event.key === "Enter" || event.key === " ") {
-          event.preventDefault();
-          toggleCard(card);
-        }
-      });
-    });
-  </script>
+  });
+});
+</script>
 
 </body>
 </html>
