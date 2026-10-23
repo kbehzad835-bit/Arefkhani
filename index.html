@@ -1,121 +1,5 @@
 
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>سیم‌کش | برق و قفل‌سازی خودرو</title>
-
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: Tahoma, Arial, sans-serif;
-  background: #0b0b0b;
-  color: #fff;
-  line-height: 1.9;
-}
-
-a {
-  text-decoration: none;
-}
-
-header {
-  background: #111;
-  padding: 18px;
-  border-bottom: 2px solid #d9ad50;
-}
-
-nav {
-  max-width: 1000px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 27px;
-  font-weight: bold;
-  color: #e6bd58;
-}
-
-nav a:last-child {
-  color: white;
-}
-
-.hero {
-  padding: 65px 20px;
-  text-align: center;
-  background: radial-gradient(circle, #38280e, #0b0b0b 75%);
-}
-
-.tag {
-  display: inline-block;
-  color: #e6bd58;
-  border: 1px solid #80642d;
-  border-radius: 30px;
-  padding: 4px 14px;
-}
-
-h1 {
-  font-size: clamp(30px, 7vw, 48px);
-  line-height: 1.5;
-  margin: 20px 0;
-}
-
-.gold {
-  color: #e6bd58;
-}
-
-.hero p {
-  color: #ccc;
-  max-width: 600px;
-  margin: 0 auto 25px;
-}
-
-.btn {
-  display: inline-block;
-  padding: 11px 22px;
-  margin: 5px;
-  border-radius: 8px;
-  font-weight: bold;
-  border: 1px solid #e6bd58;
-}
-
-.primary {
-  background: #e6bd58;
-  color: #111;
-}
-
-.secondary {
-  color: #e6bd58;
-}
-
-section {
-  padding: 45px 20px;
-  text-align: center;
-}
-
-h2 {
-  color: #e6bd58;
-  font-size: 27px;
-  margin-bottom: 12px;
-}
-
-.subtitle {
-  color: #bbb;
-  margin-bottom: 25px;
-}
-
 .services {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -129,6 +13,7 @@ h2 {
   border: 1px solid #49391b;
   border-radius: 14px;
   padding: 24px 16px;
+  text-align: center;
 }
 
 .icon {
@@ -145,110 +30,41 @@ h2 {
   font-size: 14px;
 }
 
-.contact-box,
-.address-box {
-  max-width: 650px;
-  margin: auto;
-  padding: 28px 18px;
-  background: #171717;
-  border: 1px solid #80642d;
-  border-radius: 15px;
-}
-
-.phone {
-  color: #e6bd58;
-  font-size: 22px;
-  margin: 15px 0;
-  direction: ltr;
-}
-
-.address-text {
-  margin: 15px 0;
-  color: #eee;
-}
-
-footer {
-  text-align: center;
-  padding: 22px;
-  background: #111;
-  color: #aaa;
-  border-top: 1px solid #49391b;
-  font-size: 13px;
-}
-
-.call-fixed {
+.details {
   display: none;
+  text-align: right;
+  margin-top: 15px;
+  padding-top: 12px;
+  border-top: 1px solid #49391b;
+}
+
+.details.open {
+  display: block;
+}
+
+.more {
+  margin-top: 15px;
+  background: #e6bd58;
+  color: #111;
+  padding: 9px 14px;
+  border: 0;
+  border-radius: 7px;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
 }
 
 @media (max-width: 650px) {
   .services {
     grid-template-columns: 1fr;
   }
-
-  .hero {
-    padding: 45px 15px;
-  }
-
-  body {
-    padding-bottom: 60px;
-  }
-
-  .call-fixed {
-    display: block;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    text-align: center;
-    padding: 12px;
-    background: #e6bd58;
-    color: #111;
-    font-weight: bold;
-    z-index: 10;
-  }
 }
 </style>
-</head>
-
-<body>
-
-<header>
-  <nav>
-    <a href="#" class="logo">⚡ سیم‌کش</a>
-    <a href="#contact">تماس با ما</a>
-  </nav>
-</header>
-
-<main>
-
-<div class="hero">
-  <span class="tag">برق و قفل‌سازی خودرو | نیشابور</span>
-
-  <h1>
-    خدمات تخصصی خودرو
-    <br>
-    <span class="gold">با دقت و اطمینان</span>
-  </h1>
-
-  <p>
-    خدمات سیم‌کشی ماشین، برق خودرو،
-    عیب‌یابی برقی و قفل‌سازی خودرو.
-    برای هماهنگی با ما تماس بگیرید.
-  </p>
-
-  <a class="btn primary" href="tel:09940266019">
-    📞 تماس با سیم‌کش
-  </a>
-
-  <a class="btn secondary" href="#address">
-    📍 آدرس مغازه
-  </a>
-</div>
 
 <section id="services">
-  <h2>خدمات ما</h2>
+  <h2>خدمات سیم‌کش</h2>
   <p class="subtitle">
-    خدمات برق و قفل‌سازی خودرو در نیشابور
+    برای آشنایی بیشتر با خدمات، روی هر بخش بزنید.
   </p>
 
   <div class="services">
@@ -256,75 +72,91 @@ footer {
     <div class="card">
       <div class="icon">⚡</div>
       <h3>سیم‌کشی خودرو</h3>
-      <p>
-        بررسی سیم‌کشی و اتصالات برقی ماشین.
-      </p>
+      <p>بررسی سیم‌ها و اتصالات برقی ماشین.</p>
+
+      <button class="more" onclick="toggleDetails('wiring',this)">
+        توضیحات بیشتر +
+      </button>
+
+      <div class="details" id="wiring">
+        <p>
+          سیم‌کشی خودرو وظیفه انتقال برق بین باتری،
+          فیوزها، چراغ‌ها، سنسورها و دیگر تجهیزات
+          الکتریکی ماشین را بر عهده دارد.
+        </p>
+        <br>
+        <p>
+          خرابی سیم‌ها، اتصالات شل یا سوختگی سیم‌کشی
+          ممکن است باعث قطعی برق، کار نکردن چراغ‌ها
+          یا اختلال در تجهیزات خودرو شود.
+          بررسی اتصالات و پیدا کردن محل خرابی،
+          از خدمات این بخش است.
+        </p>
+      </div>
     </div>
 
     <div class="card">
       <div class="icon">🔒</div>
       <h3>قفل‌سازی خودرو</h3>
-      <p>
-        خدمات مربوط به قفل درها و مشکلات قفل ماشین.
-      </p>
+      <p>رسیدگی به مشکلات قفل درهای ماشین.</p>
+
+      <button class="more" onclick="toggleDetails('lock',this)">
+        توضیحات بیشتر +
+      </button>
+
+      <div class="details" id="lock">
+        <p>
+          قفل در خودرو ممکن است به دلیل فرسودگی،
+          خرابی قطعات داخلی یا مشکل در سیستم
+          قفل مرکزی درست کار نکند.
+        </p>
+        <br>
+        <p>
+          در خدمات قفل‌سازی، وضعیت قفل و عملکرد
+          قطعات مربوط بررسی می‌شود تا مشکل
+          مشخص و برای تعمیر آن هماهنگی شود.
+          این خدمات شامل ساخت کلید یا سوئیچ نیست.
+        </p>
+      </div>
     </div>
 
     <div class="card">
       <div class="icon">🔧</div>
       <h3>عیب‌یابی برق خودرو</h3>
-      <p>
-        بررسی ایرادهای برقی خودرو و هماهنگی برای تعمیر.
-      </p>
+      <p>بررسی مشکلات و ایرادهای برقی ماشین.</p>
+
+      <button class="more" onclick="toggleDetails('electric',this)">
+        توضیحات بیشتر +
+      </button>
+
+      <div class="details" id="electric">
+        <p>
+          سیستم برق خودرو بخش‌های مختلفی مثل باتری،
+          دینام، استارت، فیوزها و تجهیزات روشنایی
+          را شامل می‌شود.
+        </p>
+        <br>
+        <p>
+          روشن نشدن خودرو، ضعیف شدن باتری،
+          کار نکردن چراغ‌ها یا قطع و وصل شدن
+          تجهیزات برقی می‌تواند علت‌های متفاوتی
+          داشته باشد. عیب‌یابی به پیدا کردن علت
+          احتمالی مشکل و انتخاب روش تعمیر مناسب
+          کمک می‌کند.
+        </p>
+      </div>
     </div>
 
   </div>
 </section>
 
-<section id="contact">
-  <div class="contact-box">
-    <h2>تماس با ما</h2>
+<script>
+function toggleDetails(id, button) {
+  const details = document.getElementById(id);
+  const isOpen = details.classList.toggle('open');
 
-    <p>برای هماهنگی خدمات تماس بگیرید.</p>
-
-    <div class="phone">09940266019</div>
-
-    <a class="btn primary" href="tel:09940266019">
-      📞 تماس تلفنی
-    </a>
-  </div>
-</section>
-
-<section id="address">
-  <div class="address-box">
-    <h2>📍 آدرس مغازه</h2>
-
-    <p class="address-text">
-      نیشابور، سی‌متری طالقانی،
-      طالقانی ۲۸، کوچه میکرون
-    </p>
-
-    <a
-      class="btn primary"
-      href="https://www.google.com/maps/search/?api=1&query=نیشابور%20سی%20متری%20طالقانی%20طالقانی%2028%20کوچه%20میکرون"
-      target="_blank"
-      rel="noopener"
-    >
-      مشاهده آدرس روی نقشه
-    </a>
-  </div>
-</section>
-
-</main>
-
-<footer>
-  © سیم‌کش | خدمات برق و قفل‌سازی خودرو
-  <br>
-  نیشابور
-</footer>
-
-<a class="call-fixed" href="tel:09940266019">
-  📞 تماس مستقیم با سیم‌کش
-</a>
-
-</body>
-                             </html>
+  button.textContent = isOpen
+    ? 'بستن توضیحات −'
+    : 'توضیحات بیشتر +';
+}
+</script>
